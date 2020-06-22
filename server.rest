@@ -1,0 +1,30 @@
+###
+POST http://localhost:9600/login
+Content-Type: application/json
+
+{
+    "username": "Max"
+}
+
+
+###
+GET http://localhost:9500/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF4IiwiaWF0IjoxNTkyNzk2Mjg5LCJleHAiOjE1OTI3OTYzMDl9.sPbtI92Cu_tdLSbpGwJTNkyjiLhKGONf514k6JOokYY
+
+###
+POST http://localhost:9600/token
+Content-Type: application/json
+
+{
+    "token": 
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF4IiwiaWF0IjoxNTkyNzk1ODg0fQ.qTrOUstrAKQdWRMpARe_9Kkg1qaQRSRLl8c5qgSgfEk"
+}
+
+
+###
+DELETE http://localhost:9600/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWF4IiwiaWF0IjoxNTkyNzk2Mjg5LCJleHAiOjE1OTI3OTYzMDl9.sPbtI92Cu_tdLSbpGwJTNkyjiLhKGONf514k6JOokYY"
+}
